@@ -1,0 +1,27 @@
+.header {
+	padding: 20px 0px;
+	background: $darkColor;
+	width: 100%;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		flex: 0 1 100%;
+	}
+	&__logo {
+		font-size: 33px;
+		font-weight: 600;
+		margin-right: 30px;
+	}
+	&__link {
+		color: aliceblue;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $redColor;
+		}
+	}
+}

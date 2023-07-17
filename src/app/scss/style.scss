@@ -1,0 +1,73 @@
+// БАЗОВЫЙ ШРИФТ НА ВСЕМ САЙТЕ ==================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap&subset=cyrillic-ext");
+
+// ДЕФОЛТНЫЙ ШРИФТ ВСЕГО ПРОЕКТА, тот который преобладает =======================================================
+$fontFamily: "Oswald", sans-serif;
+//===============================================================================================================
+
+// ЦВЕТОВАЯ ПАЛИТРА =======================================================
+$redColor: #d21011;
+$darkColor: #171a21;
+//===============================================================================================================
+
+// ОБНУЛЯЮЩИЕ СТИЛИ =============================================================================================
+@import "ziro";
+//===============================================================================================================
+
+// ОСНОВНОЙ КОНТЕЙНЕР
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	&__content {
+		flex: 1 1 auto;
+	}
+}
+
+// ОБЩАЯ НАСТРАИВАЕМАЯ СТИЛИСТИКА
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background: #1f2937;
+	border-radius: 100vh !important;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(135deg, #00ffaa 0%, #4579f5 53.01%, #9c42f5 99.83%);
+}
+._container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+
+// Imports ФАЙЛОВ ДРУГИХ СУЩНОСТЕЙ ==============================================================================
+//@import "spinner";
+@import "header";
+@import "navbar";
+//@import "footer";
+//@import "homePage";
+//@import "sliderGallery";
+//@import "wideScaleSlider";
+//@import "weHave";
+//@import "circleDance";
+//@import "categoryBlock";
+//@import "aboutUsBlock";
+//@import "aboutUsOpportunities";
+//@import "aboutUsValues";
+//@import "aboutUsActivity";
+//@import "aboutUsGames";
+//@import "store";
+//@import "storeGames";
+//@import "sliderComments";
+//@import "authPages";
+//@import "form";
+//@import "notFound";
+//@import "registrationPage";
+//@import "gamePage";
+//@import "addComment";
+//@import "extendedComment";
+//@import "commentsBlock";
+//@import "commentsPageForGame";

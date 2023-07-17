@@ -1,0 +1,24 @@
+.navbar {
+	&__list {
+		display: flex;
+		align-items: center;
+		li {
+			font-size: 18px;
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+	&__link {
+		color: aliceblue;
+		transition: color 0.3s ease 0s;
+		&:hover {
+			color: $redColor;
+		}
+	}
+	&__home-icon {
+		width: 30px;
+		height: 30px;
+	}
+}

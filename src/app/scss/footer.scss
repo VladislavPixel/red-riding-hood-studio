@@ -1,0 +1,29 @@
+.footer {
+	background: $darkColor;
+	padding: 20px 0px;
+	width: 100%;
+	&__container {
+		display: flex;
+	}
+	&__column {
+		flex: 0 1 50%;
+		&:last-child {
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			flex-direction: column;
+		}
+	}
+	&__logo {
+		color: aliceblue;
+		transition: color 0.3s ease 0s;
+		font-size: 18px;
+		&:hover {
+			color: $redColor;
+		}
+	}
+	&__rules {
+		margin-top: 15px;
+		color: $gray;
+	}
+}

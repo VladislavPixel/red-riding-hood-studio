@@ -3,7 +3,7 @@
 		<ul class="navbar__list">
 			<li v-for="({ _id, text, path, title }, index) of routers" :key="_id">
 				<router-link v-if="index === 0" :title="title" class="navbar__link" :to="path">
-					<img class="navbar__home-icon" src="@/app/assets/images/icons/home.svg" />
+					<img alt="Иконка частного домика с крышей." class="navbar__home-icon" src="@/app/assets/images/icons/home.svg" />
 				</router-link>
 				<router-link v-else :title="title" class="navbar__link" :to="path">
 					{{ text }}

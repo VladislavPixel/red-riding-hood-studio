@@ -7,7 +7,10 @@ $fontFamily: "Oswald", sans-serif;
 
 // ЦВЕТОВАЯ ПАЛИТРА =======================================================
 $redColor: #d21011;
+$darkRedColor: #580f0f;
+$liteRedColor: #fa1831;
 $darkColor: #171a21;
+$gray: rgb(177, 177, 177);
 //===============================================================================================================
 
 // ОБНУЛЯЮЩИЕ СТИЛИ =============================================================================================
@@ -26,6 +29,10 @@ $darkColor: #171a21;
 	}
 }
 
+.block-content {
+	background: #1b2533;
+}
+
 // ОБЩАЯ НАСТРАИВАЕМАЯ СТИЛИСТИКА
 ::-webkit-scrollbar {
 	width: 12px;
@@ -35,7 +42,7 @@ $darkColor: #171a21;
 	border-radius: 100vh !important;
 }
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(135deg, #00ffaa 0%, #4579f5 53.01%, #9c42f5 99.83%);
+	background: linear-gradient(135deg, $liteRedColor 0%, $redColor 53.01%, $darkRedColor 99.83%);
 }
 ._container {
 	max-width: 1320px;
@@ -47,7 +54,7 @@ $darkColor: #171a21;
 //@import "spinner";
 @import "header";
 @import "navbar";
-//@import "footer";
+@import "footer";
 //@import "homePage";
 //@import "sliderGallery";
 //@import "wideScaleSlider";

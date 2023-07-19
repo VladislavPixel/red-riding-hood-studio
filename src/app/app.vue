@@ -1,6 +1,7 @@
 <template>
 	<div class="wrapper">
 		<header-com :classes="'wrapper'" />
+		<join-social-network :classes="'wrapper'" />
 		<main className="wrapper__content block-content"></main>
 		<!--<nav>
 			<router-link to="/">Home</router-link> |

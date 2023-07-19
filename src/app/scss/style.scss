@@ -1,23 +1,25 @@
 // БАЗОВЫЙ ШРИФТ НА ВСЕМ САЙТЕ ==================================================================================
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap&subset=cyrillic-ext");
+// ========================================================================================================================
 
 // ДЕФОЛТНЫЙ ШРИФТ ВСЕГО ПРОЕКТА, тот который преобладает =======================================================
 $fontFamily: "Oswald", sans-serif;
 //===============================================================================================================
 
-// ЦВЕТОВАЯ ПАЛИТРА =======================================================
+// ЦВЕТОВАЯ ПАЛИТРА ===================================================================================
 $redColor: #d21011;
 $darkRedColor: #580f0f;
 $liteRedColor: #fa1831;
 $darkColor: #171a21;
 $gray: rgb(177, 177, 177);
+$backdrop: #1b2533;
 //===============================================================================================================
 
 // ОБНУЛЯЮЩИЕ СТИЛИ =============================================================================================
 @import "ziro";
 //===============================================================================================================
 
-// ОСНОВНОЙ КОНТЕЙНЕР
+// ОСНОВНОЙ КОНТЕЙНЕР =====================================================================================================
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -30,10 +32,10 @@ $gray: rgb(177, 177, 177);
 }
 
 .block-content {
-	background: #1b2533;
+	background: $backdrop;
 }
 
-// ОБЩАЯ НАСТРАИВАЕМАЯ СТИЛИСТИКА
+// ОБЩАЯ НАСТРАИВАЕМАЯ СТИЛИСТИКА ==========================================================================================
 ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -55,26 +57,4 @@ $gray: rgb(177, 177, 177);
 @import "header";
 @import "navbar";
 @import "footer";
-//@import "homePage";
-//@import "sliderGallery";
-//@import "wideScaleSlider";
-//@import "weHave";
-//@import "circleDance";
-//@import "categoryBlock";
-//@import "aboutUsBlock";
-//@import "aboutUsOpportunities";
-//@import "aboutUsValues";
-//@import "aboutUsActivity";
-//@import "aboutUsGames";
-//@import "store";
-//@import "storeGames";
-//@import "sliderComments";
-//@import "authPages";
-//@import "form";
-//@import "notFound";
-//@import "registrationPage";
-//@import "gamePage";
-//@import "addComment";
-//@import "extendedComment";
-//@import "commentsBlock";
-//@import "commentsPageForGame";
+@import "list-social-network";

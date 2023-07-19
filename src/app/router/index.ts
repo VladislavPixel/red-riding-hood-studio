@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import type { IRouterForView } from "@/app/type/router-for-view";
 
 // только домашний роут подключается на прямую, все остальные ленивое подключение реализуют без прогрева
 const routes: Array<RouteRecordRaw> = [
@@ -17,7 +18,7 @@ const router = createRouter({
 	routes
 });
 
-export const routersForView = [
+export const routersForView: IRouterForView[] = [
 	{
 		_id: 1,
 		text: "Домой",

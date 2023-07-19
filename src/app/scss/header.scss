@@ -5,6 +5,8 @@
 	min-height: 100px;
 	display: flex;
 	align-items: center;
+	box-shadow: 0px 0px 6px 0px #000;
+	position: relative;
 	&__container {
 		display: flex;
 		justify-content: space-between;

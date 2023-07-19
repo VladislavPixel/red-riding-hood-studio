@@ -27,8 +27,8 @@ export default defineComponent({
 		}
 	},
 	methods: {
-		getImgUrl(pic: string) {
-			return require("@/app/assets/images/icons/social-network-icons/" + pic);
+		getImgUrl(nameFile: string) {
+			return require("@/app/assets/images/icons/social-network-icons/" + nameFile);
 		}
 	}
 });

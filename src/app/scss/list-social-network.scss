@@ -1,0 +1,13 @@
+.list-social-network {
+	display: flex;
+	li {
+		margin-right: 13px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__icon {
+		width: 25px;
+		height: 25px;
+	}
+}

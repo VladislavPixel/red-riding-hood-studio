@@ -1,7 +1,10 @@
 .footer {
 	background: $darkColor;
-	padding: 20px 0px;
+	padding: 30px 0px;
 	width: 100%;
+	min-height: 100px;
+	position: relative;
+	box-shadow: 0px 0px 6px 0px #000;
 	&__container {
 		display: flex;
 	}
@@ -17,7 +20,7 @@
 	&__logo {
 		color: aliceblue;
 		transition: color 0.3s ease 0s;
-		font-size: 18px;
+		font-size: 24px;
 		&:hover {
 			color: $redColor;
 		}
@@ -25,5 +28,33 @@
 	&__rules {
 		margin-top: 15px;
 		color: $gray;
+	}
+	&__navbar {
+		margin-bottom: 15px;
+	}
+	&__gratitude {
+		display: flex;
+		align-items: center;
+		margin: 15px 0px;
+	}
+	&__text-grat {
+		font-size: 19px;
+		color: aliceblue;
+		margin-right: 5px;
+	}
+	&__fist {
+		width: 45px;
+		height: 45px;
+	}
+	&__email {
+		margin-top: 25px;
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		color: $gray;
+		&:hover {
+			color: color 0.3s ease 0s;
+			color: $redColor;
+		}
 	}
 }

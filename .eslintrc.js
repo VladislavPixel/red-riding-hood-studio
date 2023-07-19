@@ -13,7 +13,7 @@ module.exports = {
 		indent: ["error", "tab", { SwitchCase: 1 }],
 		"@typescript-eslint/indent": ["error", "tab", { SwitchCase: 1 }],
 		"vue/multi-word-component-names": 0,
-		"prettier/prettier": ["error", { printWidth: 250 }]
+		"prettier/prettier": ["error", { printWidth: 250, endOfLine: "auto" }]
 	},
 	overrides: [
 		{

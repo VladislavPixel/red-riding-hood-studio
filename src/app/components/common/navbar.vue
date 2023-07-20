@@ -16,6 +16,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { routersForView } from "@/app/router";
+import type { IRouterForView } from "@/app/type/router-for-view";
 
 export default defineComponent({
 	nameComponent: "navbar",
@@ -26,7 +27,7 @@ export default defineComponent({
 		}
 	},
 	computed: {
-		routers() {
+		routers(): IRouterForView[] {
 			return routersForView;
 		}
 	}

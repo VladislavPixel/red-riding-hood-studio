@@ -3,4 +3,5 @@ export interface ISocialNetworkDataItem {
 	img: string;
 	title: string;
 	alt: string;
+	path: string;
 }

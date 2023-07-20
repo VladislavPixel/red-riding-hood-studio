@@ -1,0 +1,10 @@
+.slider-presentation {
+	display: flex;
+	padding: 25px 0px;
+	&__column {
+		flex: 0 1 60%;
+		&:last-child {
+			flex: 0 1 40%;
+		}
+	}
+}

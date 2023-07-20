@@ -29,9 +29,7 @@ export default defineComponent({
 		}
 	},
 	mounted() {
-		const presentationStore = this.$store.state.presentationSliderData;
-
-		if (presentationStore.isLoadingData) {
+		if (this.isLoading) {
 			this.fetchDataPresentation();
 		}
 	}

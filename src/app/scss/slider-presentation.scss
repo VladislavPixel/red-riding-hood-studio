@@ -1,10 +1,88 @@
 .slider-presentation {
 	display: flex;
-	padding: 25px 0px;
+	height: 535px;
 	&__column {
 		flex: 0 1 60%;
 		&:last-child {
 			flex: 0 1 40%;
+			margin-left: 15px;
 		}
+	}
+	&__block-posters {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0px 0px 6px 0px #000;
+	}
+	&__slide {
+		flex: 0 0 100%;
+		position: relative;
+		width: 100%;
+	}
+	&__poster-img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 10;
+	}
+	&__title-game {
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width: 100%;
+		z-index: 14;
+		text-align: center;
+		span {
+			color: aliceblue;
+			font-size: 35px;
+			background: #1b2533b4;
+			border-radius: 16px;
+			padding: 7px 20px;
+			box-shadow: 0px 0px 6px 0px #000;
+		}
+	}
+}
+
+.gallery-slider-presentation {
+	&__block-columns {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	&__column {
+		flex: 0 1 50%;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0px 0px 6px 0px #000;
+		
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__image-container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	&__image {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 20;
+	}
+	&__phrase {
+		margin-bottom: 15px;
+		color: aliceblue;
+		font-size: 28px;
+		text-align: center;
 	}
 }

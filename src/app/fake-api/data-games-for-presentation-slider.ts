@@ -5,22 +5,40 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		_id: "present-slider-01",
 		idGame: "hello-neighbor-1234325435",
 		nameGame: "Hello Neighbor",
-		posterGamePath: "@/app/assets/images/posters-games/hello-neighbor.jpg",
-		miniPosters: ["@/app/assets/images/mini-posters/q7wasi4jj2k52gcl76yf9txdf3ks4oms.jpg", "@/app/assets/images/mini-posters/cgucqi9acxun5k3siq1cyzi3b2aup0my.jpg", "@/app/assets/images/mini-posters/n9by4pgp8k9txkn044djtxb49txpvwk5.jpg"]
+		posterGameNameFile: "hello-neighbor-poster.jpg",
+		alt: "Постер с главным злодеем игры",
+		phrase: "Время играть в прятки!",
+		miniPosters: [
+			{ path: "q7wasi4jj2k52gcl76yf9txdf3ks4oms.jpg", alt: "Постер персонажа 1" },
+			{ path: "cgucqi9acxun5k3siq1cyzi3b2aup0my.jpg", alt: "Постер персонажа 2" },
+			{ path: "n9by4pgp8k9txkn044djtxb49txpvwk5.jpg", alt: "Постер персонажа 3" }
+		]
 	},
 	{
 		_id: "present-slider-02",
 		idGame: "this-war-of-mine-1232145466778790",
 		nameGame: "This War of Mine",
-		posterGamePath: "@/app/assets/images/posters-games/scale_1200.webp",
-		miniPosters: ["@/app/assets/images/mini-posters/a3iRYRKhfPbEarq1a96uYQ.jpeg", "@/app/assets/images/mini-posters/p1_3384575_398076cf.jpg", "@/app/assets/images/mini-posters/p1_3065416_ddc67064.jpg"]
+		posterGameNameFile: "scale_1200.webp",
+		alt: "Дом с ужасами войны на постере",
+		phrase: "Сто дней в аду...",
+		miniPosters: [
+			{ path: "a3iRYRKhfPbEarq1a96uYQ.jpeg", alt: "Постер персонажа 1" },
+			{ path: "p1_3384575_398076cf.jpg", alt: "Постер персонажа 2" },
+			{ path: "p1_3065416_ddc67064.jpg", alt: "Постер персонажа 3" }
+		]
 	},
 	{
 		_id: "present-slider-03",
 		idGame: "company-of-heroes-2-435567912",
 		nameGame: "Company of Heroes 2",
-		posterGamePath: "@/app/assets/images/posters-games/strategiyu-company-of-heroes-2.jpg",
-		miniPosters: ["@/app/assets/images/mini-posters/company_of_heroes_2_screenshot_2ad99dcd.jpeg", "@/app/assets/images/mini-posters/p1_3429378_0584af0f.jpg", "@/app/assets/images/mini-posters/e6399a82622720d978919bc2a3d34253.png"]
+		posterGameNameFile: "strategiyu-company-of-heroes-2.jpg",
+		alt: "Советский офицер с пистолетом на фоне солдат",
+		phrase: "Теперь нужно наступать",
+		miniPosters: [
+			{ path: "company_of_heroes_2_screenshot_2ad99dcd.jpeg", alt: "Постер персонажа 1" },
+			{ path: "p1_3429378_0584af0f.jpg", alt: "Постер персонажа 2" },
+			{ path: "e6399a82622720d978919bc2a3d34253.png", alt: "Постер персонажа 3" }
+		]
 	}
 ];
 

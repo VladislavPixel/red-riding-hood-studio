@@ -1,7 +1,14 @@
+export interface IMiniPoster {
+	alt: string;
+	path: string;
+}
+
 export interface IPresentationData {
 	_id: string;
 	idGame: string;
 	nameGame: string;
-	posterGamePath: string;
-	miniPosters: string[];
+	posterGameNameFile: string;
+	alt: string;
+	miniPosters: IMiniPoster[];
+	phrase: string;
 }

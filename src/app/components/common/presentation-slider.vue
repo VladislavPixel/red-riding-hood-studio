@@ -1,6 +1,6 @@
 <template>
 	<div :class="`${classes}__presentation-slider slider-presentation`">
-		<left-column-presentation-slider />
+		<left-column-presentation-slider :current="currentSlide" @update-slide="updateCurrentSlide($event)" />
 		<right-column-presentation-slider :gameData="dataGames[currentSlide]" :phrase="dataGames[currentSlide].phrase" />
 	</div>
 </template>
@@ -31,6 +31,11 @@ export default defineComponent({
 		classes: {
 			type: String,
 			default: "some-component"
+		}
+	},
+	methods: {
+		updateCurrentSlide(dataSlide: { event: number }): void {
+			this.currentSlide = dataSlide.event;
 		}
 	}
 });

@@ -9,11 +9,12 @@
 			margin-left: 15px;
 		}
 		overflow: hidden;
+		position: relative;
 	}
 	&__block-posters {
 		height: 100%;
 		display: flex;
-		position: relative;
+		transition: transform 0.3s ease 0s;
 	}
 	&__slide {
 		flex: 0 0 100%;
@@ -42,7 +43,7 @@
 		span {
 			color: aliceblue;
 			font-size: 35px;
-			background: #1b2533b4;
+			background: #1b2533e0;
 			border-radius: 16px;
 			padding: 7px 20px;
 			box-shadow: 0px 0px 6px 0px #000;
@@ -53,7 +54,7 @@
 		bottom: 20px;
 		left: 50%;
 		z-index: 30;
-		background-color: $backdrop;
+		background-color: #171a21c7;
 		padding: 10px 15px;
 		display: flex;
 		justify-content: center;
@@ -61,20 +62,61 @@
 		border-radius: 21px;
 		box-shadow: 0px 0px 6px 0px #000;
 		transform: translateX(-50%);
+		transform: background-color 0.3s ease 0s;
+		&:hover {
+			background-color: $darkColor;
+		}
 		span {
-			width: 10px;
-			height: 10px;
+			width: 7px;
+			height: 7px;
 			border-radius: 50%;
 			background-color: #8b96a3;
 			margin-right: 15px;
 			cursor: pointer;
 			box-shadow: 0px 0px 6px 0px #000;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				background-color: #cbced1;
+			}
 			&:last-child {
 				margin-right: 0px;
 			}
 			&.active {
 				background-color: $redColor;
+				width: 12px;
+				height: 12px;
 			}
+			&.extreme {
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		background-color: #171a21c7;
+		padding: 10px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 6px 0px #000;
+		z-index: 50;
+		transform: translateY(-50%);
+		transform: background-color 0.3s ease 0s;
+		&:hover {
+			background-color: $darkColor;
+		}
+		img {
+			width: 25px;
+			height: 25px;
+		}
+		&_left {
+			left: 10px;
+			img {
+				transform: rotate(180deg);
+			}
+		}
+		&_right {
+			right: 10px;
 		}
 	}
 }
@@ -116,6 +158,10 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: 20;
+		transition: transform 0.4s ease 0s;
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 	&__phrase {
 		margin-bottom: 15px;

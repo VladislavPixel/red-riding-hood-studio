@@ -1,9 +1,9 @@
 <template>
 	<div class="slider-presentation__slide">
-		<div class="slider-presentation__title-game">
+		<div title="Название игры." class="slider-presentation__title-game">
 			<span>{{ nameGame }}</span>
 		</div>
-		<img :src="getImgUrl(path)" class="slider-presentation__poster-img" :alt="alt" />
+		<img title="Основной постер." :src="getImgUrl(path)" class="slider-presentation__poster-img" :alt="alt" />
 	</div>
 </template>
 

@@ -39,6 +39,32 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 			{ path: "p1_3429378_0584af0f.jpg", alt: "Постер персонажа 2" },
 			{ path: "e6399a82622720d978919bc2a3d34253.png", alt: "Постер персонажа 3" }
 		]
+	},
+	{
+		_id: "present-slider-04",
+		idGame: "ravenous-devils-435567912",
+		nameGame: "Ravenous Devils",
+		posterGameNameFile: "ravenousdevils_image1600w.jpg",
+		alt: "Парочка маньяков на фоне своей столовой",
+		phrase: "Вкусные человеческие ребрышки",
+		miniPosters: [
+			{ path: "hll2whfzcjpjf169anhmqhk916f0v9i7.png", alt: "Постер персонажа 1" },
+			{ path: "maxresdefault.jpg", alt: "Постер персонажа 2" },
+			{ path: "p1_3341948_3072a1f8.jpg", alt: "Постер персонажа 3" }
+		]
+	},
+	{
+		_id: "present-slider-05",
+		idGame: "dota-2-435567912",
+		nameGame: "Dota 2",
+		posterGameNameFile: "1663744340_39-phonoteka-org-p-dota-oboi-na-telefon-instagram-49.jpg",
+		alt: "Лого доты 2 и на фоне звезда",
+		phrase: "Приготовиться к битве!",
+		miniPosters: [
+			{ path: "86f23fc62d9669a8250ba6ebcfc9c635.webp", alt: "Постер персонажа 1" },
+			{ path: "b1886580666fa105ebcbdeeeadbeb38c.jpeg", alt: "Постер персонажа 2" },
+			{ path: "2f7abd3e93cf65044d296bd45753be56.webp", alt: "Постер персонажа 3" }
+		]
 	}
 ];
 

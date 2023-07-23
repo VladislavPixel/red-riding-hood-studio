@@ -27,7 +27,8 @@ export default defineComponent({
 	data() {
 		return {
 			valueTranslateX: 0,
-			lastEventName: ""
+			lastEventName: "",
+			transitionValue: "transform 0.3s ease 0s"
 		};
 	},
 	computed: {
@@ -41,44 +42,99 @@ export default defineComponent({
 			return [this.dataGames[this.dataGames.length - 1], ...this.dataGames, this.dataGames[0]];
 		}
 	},
-	mounted() {
-		this.updateValueTranslateX(this.current + 1);
-
-		this.$watch("current", () => {
+	watch: {
+		current() {
 			const elementHTML: any = this.$refs["block-posters"];
 
 			if (this.current === this.dataGames.length - 1 && this.lastEventName === "update:left-arrow-click") {
-				console.log("Попал в случай когда влево скипаешь стрелкой");
-
 				this.valueTranslateX = 0;
-
-				elementHTML.style.transition = "none";
-
-				setTimeout(() => {
-					this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
-
-					elementHTML.style.transition = "transform 0.3s ease 0s";
-				}, 10);
-
-				// elementHTML.style.transform = "none";
 			} else if (this.current === 0 && this.lastEventName === "update:right-arrow-click") {
-				console.log("Попал в случай когда впрапво скипаешь стрелкой");
-
 				this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
-
-				elementHTML.style.transition = "none";
-
-				setTimeout(() => {
-					this.valueTranslateX = 0;
-
-					elementHTML.style.transition = "transform 0.3s ease 0s";
-				}, 10);
 			} else {
-				console.log("Базовый случай не напрямую, а через функцию");
-
 				this.updateValueTranslateX(this.current + 1);
 			}
-		});
+		},
+		valueTranslateX() {
+			const elementHTML: any = this.$refs["block-posters"];
+
+			if (this.valueTranslateX === 0) {
+				this.transitionValue = "none";
+				// ОПТИМИЗИРОВАТЬ
+				elementHTML.style.transition = "none";
+			} else if (this.valueTranslateX === (elementHTML.offsetWidth + 15) * this.dataGames.length) {
+				this.transitionValue = "none";
+				// ОПТИМИЗИРОВАТЬ
+				elementHTML.style.transition = "none";
+			}
+		},
+		transitionValue() {
+			const elementHTML: any = this.$refs["block-posters"];
+
+			if (this.transitionValue === "none" && this.lastEventName === "update:left-arrow-click") {
+				this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
+
+				this.transitionValue = "transform 0.3s ease 0s";
+
+				elementHTML.style.transition = "transform 0.3s ease 0s";
+			} else if (this.transitionValue === "none" && this.lastEventName === "update:right-arrow-click") {
+				this.updateValueTranslateX(this.current + 1);
+				// ОПТИМИЗИРОВАТЬ
+				this.transitionValue = "transform 0.3s ease 0s";
+
+				elementHTML.style.transition = "transform 0.3s ease 0s";
+			}
+		}
+	},
+	mounted() {
+		this.updateValueTranslateX(this.current + 1);
+		// НЕ РАБОАТЕТ
+		// this.$watch("current", (newVal: number, oldVal: number) => {
+		// 	const elementHTML: any = this.$refs["block-posters"];
+
+		// 	if (this.current === this.dataGames.length - 1 && this.lastEventName === "update:left-arrow-click") {
+		// 		console.log("Попал в случай когда влево скипаешь стрелкой");
+
+		// 		this.valueTranslateX = 0;
+
+		// 		console.log(this.valueTranslateX, "Снаружи nextTick");
+		// 		console.log(newVal, "Новое значение");
+		// 		console.log(oldVal, "Старое значение");
+
+		// 		// this.$nextTick(() => {
+		// 		// 	console.log(this.valueTranslateX, "Внутри nextTick");
+
+		// 		// 	elementHTML.style.transition = "none";
+
+		// 		// 	this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
+		// 		// });
+
+		// 		// this.$nextTick(() => {
+		// 		// 	elementHTML.style.transition = "none";
+		// 		// 	// НЕ РАБОТАЕТ ЗАДУМКА
+		// 		// 	this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
+
+		// 		// 	this.$nextTick(() => {
+		// 		// 		elementHTML.style.transition = "transform 0.3s ease 0s";
+		// 		// 	});
+		// 		// });
+		// 	} else if (this.current === 0 && this.lastEventName === "update:right-arrow-click") {
+		// 		console.log("Попал в случай когда впрапво скипаешь стрелкой");
+
+		// 		this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
+
+		// 		elementHTML.style.transition = "none";
+
+		// 		setTimeout(() => {
+		// 			this.valueTranslateX = 0;
+
+		// 			elementHTML.style.transition = "transform 0.3s ease 0s";
+		// 		}, 10);
+		// 	} else {
+		// 		console.log("Базовый случай не напрямую, а через функцию");
+
+		// 		this.updateValueTranslateX(this.current + 1);
+		// 	}
+		// });
 	},
 	methods: {
 		updateLastEventName(valueEventName: string): void {

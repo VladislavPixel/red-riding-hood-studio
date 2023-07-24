@@ -1,0 +1,18 @@
+.gallery-block-images {
+	&__title {
+		display: flex;
+		align-items: center;
+		span {
+			text-transform: uppercase;
+			font-size: 90px;
+			margin-right: 15px;
+			color: aliceblue;
+			letter-spacing: 0.05em;
+		}
+	}
+	&__icon {
+		width: 80px;
+		height: 80px;
+		flex: 0 0 80px;
+	}
+}

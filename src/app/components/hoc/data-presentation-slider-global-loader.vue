@@ -22,12 +22,6 @@ export default defineComponent({
 			fetchDataPresentation: "presentationSliderData/fetchDataPresentationSlider"
 		})
 	},
-	props: {
-		classes: {
-			type: String,
-			default: ""
-		}
-	},
 	mounted() {
 		if (this.isLoading) {
 			this.fetchDataPresentation();

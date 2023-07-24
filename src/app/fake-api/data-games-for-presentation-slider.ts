@@ -20,7 +20,7 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		nameGame: "This War of Mine",
 		posterGameNameFile: "scale_1200.webp",
 		alt: "Дом с ужасами войны на постере",
-		phrase: "Сто дней в аду...",
+		phrase: "100 дней в аду...",
 		miniPosters: [
 			{ path: "a3iRYRKhfPbEarq1a96uYQ.jpeg", alt: "Постер персонажа 1" },
 			{ path: "p1_3384575_398076cf.jpg", alt: "Постер персонажа 2" },
@@ -64,6 +64,19 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 			{ path: "86f23fc62d9669a8250ba6ebcfc9c635.webp", alt: "Постер персонажа 1" },
 			{ path: "b1886580666fa105ebcbdeeeadbeb38c.jpeg", alt: "Постер персонажа 2" },
 			{ path: "2f7abd3e93cf65044d296bd45753be56.webp", alt: "Постер персонажа 3" }
+		]
+	},
+	{
+		_id: "present-slider-06",
+		idGame: "inside-435567912-ins",
+		nameGame: "Inside",
+		posterGameNameFile: "1512559938_preview_INSIDE review thumbnail.png",
+		alt: "Мальчик из игры Inside скрывается за железной балкой от лампочки",
+		phrase: "Твой разум - их работа",
+		miniPosters: [
+			{ path: "maxresdefault123123123.jpg", alt: "Постер персонажа 1" },
+			{ path: "4ee181050ae023aedeea7c9458c72551.png", alt: "Постер персонажа 2" },
+			{ path: "400b3647ea65ecf9962ed621896c23a6--draw.jpg", alt: "Постер персонажа 3" }
 		]
 	}
 ];

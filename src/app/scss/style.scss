@@ -38,6 +38,14 @@ $backdrop: #1b2533;
 		padding: 30px 0px;
 	}
 }
+// PAGES ==================================================================================================================
+.home-block {
+	&__presentation-slider {
+		margin-bottom: 60px;
+	}
+	&__images-block-gallery {
+	}
+}
 
 // ОБЩАЯ НАСТРАИВАЕМАЯ СТИЛИСТИКА ==========================================================================================
 ::-webkit-scrollbar {
@@ -67,3 +75,5 @@ $backdrop: #1b2533;
 @import "list-social-network";
 @import "join-social-network";
 @import "slider-presentation";
+@import "images-block-gallery";
+@import "message-lite";

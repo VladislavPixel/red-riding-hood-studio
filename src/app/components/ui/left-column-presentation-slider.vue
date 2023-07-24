@@ -42,99 +42,72 @@ export default defineComponent({
 			return [this.dataGames[this.dataGames.length - 1], ...this.dataGames, this.dataGames[0]];
 		}
 	},
-	watch: {
-		current() {
-			const elementHTML: any = this.$refs["block-posters"];
-
-			if (this.current === this.dataGames.length - 1 && this.lastEventName === "update:left-arrow-click") {
-				this.valueTranslateX = 0;
-			} else if (this.current === 0 && this.lastEventName === "update:right-arrow-click") {
-				this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
-			} else {
-				this.updateValueTranslateX(this.current + 1);
-			}
-		},
-		valueTranslateX() {
-			const elementHTML: any = this.$refs["block-posters"];
-
-			if (this.valueTranslateX === 0) {
-				this.transitionValue = "none";
-				// ОПТИМИЗИРОВАТЬ
-				elementHTML.style.transition = "none";
-			} else if (this.valueTranslateX === (elementHTML.offsetWidth + 15) * this.dataGames.length) {
-				this.transitionValue = "none";
-				// ОПТИМИЗИРОВАТЬ
-				elementHTML.style.transition = "none";
-			}
-		},
-		transitionValue() {
-			const elementHTML: any = this.$refs["block-posters"];
-
-			if (this.transitionValue === "none" && this.lastEventName === "update:left-arrow-click") {
-				this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
-
-				this.transitionValue = "transform 0.3s ease 0s";
-
-				elementHTML.style.transition = "transform 0.3s ease 0s";
-			} else if (this.transitionValue === "none" && this.lastEventName === "update:right-arrow-click") {
-				this.updateValueTranslateX(this.current + 1);
-				// ОПТИМИЗИРОВАТЬ
-				this.transitionValue = "transform 0.3s ease 0s";
-
-				elementHTML.style.transition = "transform 0.3s ease 0s";
-			}
-		}
-	},
 	mounted() {
 		this.updateValueTranslateX(this.current + 1);
-		// НЕ РАБОАТЕТ
-		// this.$watch("current", (newVal: number, oldVal: number) => {
-		// 	const elementHTML: any = this.$refs["block-posters"];
 
-		// 	if (this.current === this.dataGames.length - 1 && this.lastEventName === "update:left-arrow-click") {
-		// 		console.log("Попал в случай когда влево скипаешь стрелкой");
+		this.$watch(
+			"current",
+			() => {
+				const elementHTML: any = this.$refs["block-posters"];
 
-		// 		this.valueTranslateX = 0;
+				if (this.current === this.dataGames.length - 1 && this.lastEventName === "update:left-arrow-click") {
+					this.valueTranslateX = 0;
+				} else if (this.current === 0 && this.lastEventName === "update:right-arrow-click") {
+					this.valueTranslateX = (elementHTML.offsetWidth + 15) * (this.dataGames.length + 1);
+				} else {
+					this.updateValueTranslateX(this.current + 1);
+				}
+			},
+			{ flush: "sync" }
+		);
 
-		// 		console.log(this.valueTranslateX, "Снаружи nextTick");
-		// 		console.log(newVal, "Новое значение");
-		// 		console.log(oldVal, "Старое значение");
+		this.$watch(
+			"valueTranslateX",
+			() => {
+				const elementHTML: any = this.$refs["block-posters"];
 
-		// 		// this.$nextTick(() => {
-		// 		// 	console.log(this.valueTranslateX, "Внутри nextTick");
+				if (this.valueTranslateX === 0 || this.valueTranslateX === (elementHTML.offsetWidth + 15) * (this.dataGames.length + 1)) {
+					setTimeout(() => {
+						this.transitionValue = "transform 0s ease 0s";
 
-		// 		// 	elementHTML.style.transition = "none";
+						elementHTML.style.transition = "transform 0s ease 0s";
+					}, 310);
+				}
+			},
+			{ flush: "post" }
+		);
 
-		// 		// 	this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
-		// 		// });
+		this.$watch(
+			"transitionValue",
+			() => {
+				const elementHTML: any = this.$refs["block-posters"];
 
-		// 		// this.$nextTick(() => {
-		// 		// 	elementHTML.style.transition = "none";
-		// 		// 	// НЕ РАБОТАЕТ ЗАДУМКА
-		// 		// 	this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
+				if (this.transitionValue === "transform 0s ease 0s" && this.lastEventName === "update:left-arrow-click") {
+					this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
 
-		// 		// 	this.$nextTick(() => {
-		// 		// 		elementHTML.style.transition = "transform 0.3s ease 0s";
-		// 		// 	});
-		// 		// });
-		// 	} else if (this.current === 0 && this.lastEventName === "update:right-arrow-click") {
-		// 		console.log("Попал в случай когда впрапво скипаешь стрелкой");
+					this.lastEventName = "";
+				} else if (this.transitionValue === "transform 0s ease 0s" && this.lastEventName === "update:right-arrow-click") {
+					this.updateValueTranslateX(this.current + 1);
 
-		// 		this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
+					this.lastEventName = "";
+				}
+			},
+			{ flush: "post" }
+		);
 
-		// 		elementHTML.style.transition = "none";
+		this.$watch(
+			"lastEventName",
+			() => {
+				if (this.transitionValue === "transform 0s ease 0s") {
+					const elementHTML: any = this.$refs["block-posters"];
 
-		// 		setTimeout(() => {
-		// 			this.valueTranslateX = 0;
+					elementHTML.style.transition = "transform 0.3s ease 0s";
 
-		// 			elementHTML.style.transition = "transform 0.3s ease 0s";
-		// 		}, 10);
-		// 	} else {
-		// 		console.log("Базовый случай не напрямую, а через функцию");
-
-		// 		this.updateValueTranslateX(this.current + 1);
-		// 	}
-		// });
+					this.transitionValue = "transform 0.3s ease 0s";
+				}
+			},
+			{ flush: "post" }
+		);
 	},
 	methods: {
 		updateLastEventName(valueEventName: string): void {
@@ -158,9 +131,7 @@ export default defineComponent({
 		updateValueTranslateX(valueSlide: number): void {
 			const elementHTML: any = this.$refs["block-posters"];
 
-			const newValue = (elementHTML.offsetWidth + 15) * valueSlide;
-
-			this.valueTranslateX = newValue;
+			this.valueTranslateX = (elementHTML.offsetWidth + 15) * valueSlide;
 		}
 	},
 	props: {

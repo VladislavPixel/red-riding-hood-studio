@@ -1,6 +1,7 @@
 export interface IMiniPoster {
 	alt: string;
 	path: string;
+	_id: string;
 }
 
 export interface IPresentationData {

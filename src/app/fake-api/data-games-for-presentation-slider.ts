@@ -9,9 +9,9 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		alt: "Постер с главным злодеем игры",
 		phrase: "Время играть в прятки!",
 		miniPosters: [
-			{ path: "q7wasi4jj2k52gcl76yf9txdf3ks4oms.jpg", alt: "Постер персонажа 1" },
-			{ path: "cgucqi9acxun5k3siq1cyzi3b2aup0my.jpg", alt: "Постер персонажа 2" },
-			{ path: "n9by4pgp8k9txkn044djtxb49txpvwk5.jpg", alt: "Постер персонажа 3" }
+			{ path: "q7wasi4jj2k52gcl76yf9txdf3ks4oms.jpg", alt: "Постер персонажа 1", _id: "vbnm65657" },
+			{ path: "cgucqi9acxun5k3siq1cyzi3b2aup0my.jpg", alt: "Постер персонажа 2", _id: "vbnm6565723132" },
+			{ path: "n9by4pgp8k9txkn044djtxb49txpvwk5.jpg", alt: "Постер персонажа 3", _id: "vbnm65657cvxvxcv" }
 		]
 	},
 	{
@@ -22,9 +22,9 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		alt: "Дом с ужасами войны на постере",
 		phrase: "100 дней в аду...",
 		miniPosters: [
-			{ path: "a3iRYRKhfPbEarq1a96uYQ.jpeg", alt: "Постер персонажа 1" },
-			{ path: "p1_3384575_398076cf.jpg", alt: "Постер персонажа 2" },
-			{ path: "p1_3065416_ddc67064.jpg", alt: "Постер персонажа 3" }
+			{ path: "a3iRYRKhfPbEarq1a96uYQ.jpeg", alt: "Постер персонажа 1", _id: "vbnm65657ytuio" },
+			{ path: "p1_3384575_398076cf.jpg", alt: "Постер персонажа 2", _id: "vbnm65657zzczx" },
+			{ path: "p1_3065416_ddc67064.jpg", alt: "Постер персонажа 3", _id: "vbnm65657qweeqw" }
 		]
 	},
 	{
@@ -35,9 +35,9 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		alt: "Советский офицер с пистолетом на фоне солдат",
 		phrase: "Теперь нужно наступать",
 		miniPosters: [
-			{ path: "company_of_heroes_2_screenshot_2ad99dcd.jpeg", alt: "Постер персонажа 1" },
-			{ path: "p1_3429378_0584af0f.jpg", alt: "Постер персонажа 2" },
-			{ path: "e6399a82622720d978919bc2a3d34253.png", alt: "Постер персонажа 3" }
+			{ path: "company_of_heroes_2_screenshot_2ad99dcd.jpeg", alt: "Постер персонажа 1", _id: "vbnm65657ytuioasdasdda" },
+			{ path: "p1_3429378_0584af0f.jpg", alt: "Постер персонажа 2", _id: "vbnm65657ytuio213213" },
+			{ path: "e6399a82622720d978919bc2a3d34253.png", alt: "Постер персонажа 3", _id: "vbnm65657ytuio3242344326567" }
 		]
 	},
 	{
@@ -48,9 +48,9 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		alt: "Парочка маньяков на фоне своей столовой",
 		phrase: "Вкусные человеческие ребрышки",
 		miniPosters: [
-			{ path: "hll2whfzcjpjf169anhmqhk916f0v9i7.png", alt: "Постер персонажа 1" },
-			{ path: "maxresdefault.jpg", alt: "Постер персонажа 2" },
-			{ path: "p1_3341948_3072a1f8.jpg", alt: "Постер персонажа 3" }
+			{ path: "hll2whfzcjpjf169anhmqhk916f0v9i7.png", alt: "Постер персонажа 1", _id: "vbnm65657ytuio3242344326567qwewr" },
+			{ path: "maxresdefault.jpg", alt: "Постер персонажа 2", _id: "vbnm65657ytuio3242344326567asdffg" },
+			{ path: "p1_3341948_3072a1f8.jpg", alt: "Постер персонажа 3", _id: "vbnm65657ytuio3242344326567lkgrt" }
 		]
 	},
 	{
@@ -61,9 +61,9 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		alt: "Лого доты 2 и на фоне звезда",
 		phrase: "Приготовиться к битве!",
 		miniPosters: [
-			{ path: "86f23fc62d9669a8250ba6ebcfc9c635.webp", alt: "Постер персонажа 1" },
-			{ path: "b1886580666fa105ebcbdeeeadbeb38c.jpeg", alt: "Постер персонажа 2" },
-			{ path: "2f7abd3e93cf65044d296bd45753be56.webp", alt: "Постер персонажа 3" }
+			{ path: "86f23fc62d9669a8250ba6ebcfc9c635.webp", alt: "Постер персонажа 1", _id: "vbnm65657ytuio3242344326567lkgrt00000" },
+			{ path: "b1886580666fa105ebcbdeeeadbeb38c.jpeg", alt: "Постер персонажа 2", _id: "vbnm65657ytuio3242344326567lkgrt999999" },
+			{ path: "2f7abd3e93cf65044d296bd45753be56.webp", alt: "Постер персонажа 3", _id: "vbnm65657ytuio3242344326567lkgrt888888" }
 		]
 	},
 	{
@@ -74,9 +74,9 @@ const dataGamesForPresentationSlider: IPresentationData[] = [
 		alt: "Мальчик из игры Inside скрывается за железной балкой от лампочки",
 		phrase: "Твой разум - их работа",
 		miniPosters: [
-			{ path: "maxresdefault123123123.jpg", alt: "Постер персонажа 1" },
-			{ path: "4ee181050ae023aedeea7c9458c72551.png", alt: "Постер персонажа 2" },
-			{ path: "400b3647ea65ecf9962ed621896c23a6--draw.jpg", alt: "Постер персонажа 3" }
+			{ path: "maxresdefault123123123.jpg", alt: "Постер персонажа 1", _id: "vbnm65657ytuio3242344326567lkgrt888888asddas" },
+			{ path: "4ee181050ae023aedeea7c9458c72551.png", alt: "Постер персонажа 2", _id: "vbnm65657ytuio3242344326567lkgrt888888zxc" },
+			{ path: "400b3647ea65ecf9962ed621896c23a6--draw.jpg", alt: "Постер персонажа 3", _id: "vbnm65657ytuio3242344326567lkgrt888888cvbvcb" }
 		]
 	}
 ];
@@ -85,7 +85,7 @@ function fetchDataGamesForPresentationSlider(): Promise<IPresentationData[]> {
 	return new Promise((resolve): void => {
 		setTimeout(() => {
 			resolve(dataGamesForPresentationSlider);
-		}, 1000);
+		}, 400);
 	});
 }
 

@@ -1,6 +1,7 @@
 import { createStore } from "vuex";
 import { presentationSliderData } from "@/app/store/presentation-slider-data";
-import { gamesImagesData } from "./games-images-block";
+import { gamesImagesData } from "@/app/store/games-images-block";
+import { conductorModalWindows } from "@/app/store/conductor-modal-windows";
 
 export default createStore({
 	state: {},
@@ -9,6 +10,7 @@ export default createStore({
 	actions: {},
 	modules: {
 		presentationSliderData,
-		gamesImagesData
+		gamesImagesData,
+		conductorModalWindows
 	}
 });

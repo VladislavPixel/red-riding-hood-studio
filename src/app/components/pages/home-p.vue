@@ -7,6 +7,7 @@
 			<data-games-images-block-global-loader>
 				<images-block-gallery :classes="'home-block'" />
 			</data-games-images-block-global-loader>
+			<video-block :classes="'home-block'" />
 		</div>
 	</div>
 </template>

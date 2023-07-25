@@ -7,5 +7,6 @@ import PresentationSlider from "@/app/components/common/presentation-slider.vue"
 import Spinner from "@/app/components/common/spinner.vue";
 import MessageLite from "@/app/components/common/message-lite.vue";
 import ImagesBlockGallery from "@/app/components/common/images-block-gallery.vue";
+import VideoBlock from "@/app/components/common/video-block.vue";
 
-export default [Header, Navbar, Footer, SocialNetworkList, JoinSocialNetwork, PresentationSlider, Spinner, MessageLite, ImagesBlockGallery];
+export default [Header, Navbar, Footer, SocialNetworkList, JoinSocialNetwork, PresentationSlider, Spinner, MessageLite, ImagesBlockGallery, VideoBlock];

@@ -30,6 +30,9 @@ $backdrop: #1b2533;
 	&__content {
 		flex: 1 1 auto;
 	}
+	&.hidden {
+		overflow: hidden;
+	}
 }
 
 .block-content {
@@ -40,10 +43,8 @@ $backdrop: #1b2533;
 }
 // PAGES ==================================================================================================================
 .home-block {
-	&__presentation-slider {
+	&__presentation-slider, &__images-block-gallery {
 		margin-bottom: 60px;
-	}
-	&__images-block-gallery {
 	}
 }
 
@@ -77,3 +78,4 @@ $backdrop: #1b2533;
 @import "slider-presentation";
 @import "images-block-gallery";
 @import "message-lite";
+@import "video-block";

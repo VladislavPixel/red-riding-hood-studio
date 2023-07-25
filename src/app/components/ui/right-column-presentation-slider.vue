@@ -5,7 +5,7 @@
 		</p>
 		<div class="gallery-slider-presentation__block-columns">
 			<div class="gallery-slider-presentation__column">
-				<template v-for="({ alt, path }, index) of gameData.miniPosters" :key="path">
+				<template v-for="({ alt, path, _id }, index) of gameData.miniPosters" :key="_id">
 					<div title="Галерея игры." v-if="index < 2" :class="`gallery-slider-presentation__image-container${index === 0 ? ' gallery-slider-presentation__image-container_first' : ''}`">
 						<img class="gallery-slider-presentation__image" :src="getImgUrl(path)" :alt="alt" />
 					</div>

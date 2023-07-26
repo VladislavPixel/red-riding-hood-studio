@@ -2,7 +2,7 @@
 	<div @click.self="$emit('close-modal')" class="gallery-block-images__modal-wrapper modal-window-gallery-images">
 		<div class="modal-window-gallery-images__container">
 			<h2 title="Игра, изображения которой Вы смотрите." class="modal-window-gallery-images__title">
-				Изображение игры --> <span>{{ nameGame }}</span>
+				<span>{{ nameGame }}</span>
 			</h2>
 			<div class="modal-window-gallery-images__img-block">
 				<img :title="dataGallery.alt" class="modal-window-gallery-images__img-target" :src="getImgUrl(dataGallery.path)" :alt="dataGallery.alt" />

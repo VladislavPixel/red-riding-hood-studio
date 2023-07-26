@@ -43,7 +43,8 @@ $backdrop: #1b2533;
 }
 // PAGES ==================================================================================================================
 .home-block {
-	&__presentation-slider, &__images-block-gallery {
+	&__presentation-slider,
+	&__images-block-gallery {
 		margin-bottom: 60px;
 	}
 }

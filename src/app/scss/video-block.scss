@@ -47,7 +47,7 @@
 	&__dot {
 		width: 20px;
 		height: 20px;
-		border-radius: 50%;
+		border-radius: 50% !important;
 		background-color: aliceblue;
 		position: relative;
 		z-index: 5;
@@ -83,8 +83,8 @@
 	&__container-frame {
 		position: relative;
 		width: 100%;
-		padding: 0px 0px 47% 0px;
-		flex: 0 1 85%;
+		padding: 0px 0px 55% 0px;
+		box-shadow: 0px 0px 6px 0px #000;
 		iframe {
 			position: absolute;
 			top: 0;
@@ -99,6 +99,131 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 20px;
+	}
+	&__main-container {
+		padding: 15px;
+		flex: 0 1 88%;
+		overflow: hidden;
+		position: relative;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 2px;
+			top: 0;
+			z-index: 15;
+			transition: all 0.3s ease 0s;
+			background-color: $redColor;
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+	}
+	&__other-videos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: 0px -10px 0px -10px;
+	}
+	&__column-video {
+		flex: 0 1 15%;
+		margin: 10px;
+		width: 100%;
+		padding: 10px;
+		position: relative;
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			width: 2px;
+			height: 2px;
+			top: 0;
+			z-index: 15;
+			transition: all 0.3s ease 0s;
+			background-color: $redColor;
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+	}
+	&__wrapper-video {
+		padding: 0px 0px 60% 0px;
+		position: relative;
+		box-shadow: 0px 0px 6px 0px #000;
+		border-radius: 16px !important;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	&__video-poster {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 20;
+	}
+	&__video-decor {
+		position: absolute;
+		width: 2px;
+		height: 2px;
+		bottom: 0;
+		z-index: 15;
+		transition: all 0.3s ease 0s;
+		background-color: $redColor;
+		&_left {
+			left: 0;
+		}
+		&_right {
+			right: 0;
+		}
+	}
+}
+
+.video-gallery-block__column-video {
+	&:hover {
+		&:before {
+			height: 70%;
+		}
+		&:after {
+			width: 70%;
+		}
+		.video-gallery-block__video-decor {
+			&_left {
+				width: 70%;
+			}
+			&_right {
+				height: 70%;
+			}
+		}
+	}
+}
+
+.video-gallery-block__main-container {
+	&:hover {
+		&:before {
+			height: 70%;
+		}
+		&:after {
+			width: 70%;
+		}
+		.video-gallery-block__video-decor {
+			&_left {
+				width: 70%;
+			}
+			&_right {
+				height: 70%;
+			}
+		}
 	}
 }
 

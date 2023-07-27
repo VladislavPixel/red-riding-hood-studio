@@ -8,14 +8,7 @@
 			<pointer-video-game @update-current="updateCurrent" v-for="(videoConfig, index) of videoElements" :key="videoConfig._id" :dataVideo="videoConfig" :current="current" :i="index" />
 			<span class="video-gallery-block__controllers-flag"></span>
 		</div>
-		<div class="video-gallery-block__main-video">
-			<div class="video-gallery-block__container-frame">
-				<section>
-					<iframe :src="activeVideo.path" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				</section>
-			</div>
-		</div>
-		<div class="video-gallery-block__other-videos"></div>
+		<video-gallery @update-active-index="updateActiveVideo" :dataCurrent="activeVideo" :otherData="otherVideos" />
 	</div>
 </template>
 
@@ -23,7 +16,8 @@
 import { defineComponent } from "vue";
 import { mapState } from "vuex";
 import PointerVideoGame from "@/app/components/ui/pointer-video-game.vue";
-import type { IMiniPoster } from "@/app/type/data-presentation-slider";
+import type { IVideoMini } from "@/app/type/data-video-games";
+import VideoGallery from "@/app/components/ui/video-gallery.vue";
 
 export default defineComponent({
 	nameComponent: "video-block",
@@ -34,7 +28,8 @@ export default defineComponent({
 		};
 	},
 	components: {
-		PointerVideoGame
+		PointerVideoGame,
+		VideoGallery
 	},
 	props: {
 		classes: {
@@ -46,20 +41,20 @@ export default defineComponent({
 		...mapState({
 			videoElements: (state: any) => state.videoGamesData.data
 		}),
-		activeVideo(): IMiniPoster {
+		activeVideo(): IVideoMini {
 			return this.videoElements[this.current].videoСlips[this.currentActiveVideo];
 		},
 		otherVideos() {
-			return this.videoElements[this.current].videoСlips.filter((videoConfig: IMiniPoster) => videoConfig._id !== this.videoElements[this.current].videoСlips[this.currentActiveVideo]._id);
+			return this.videoElements[this.current].videoСlips;
 		}
 	},
 	methods: {
 		updateCurrent(data: { value: number }): void {
 			this.current = data.value;
+		},
+		updateActiveVideo(event: { value: number }): void {
+			this.currentActiveVideo = event.value;
 		}
-	},
-	mounted() {
-		console.log(this.otherVideos, "Игры которые на отрисовку");
 	}
 });
 </script>

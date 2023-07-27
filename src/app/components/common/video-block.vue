@@ -34,7 +34,7 @@ export default defineComponent({
 	props: {
 		classes: {
 			type: String,
-			default: ""
+			default: "some-component"
 		}
 	},
 	computed: {

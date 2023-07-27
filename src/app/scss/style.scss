@@ -44,7 +44,8 @@ $backdrop: #1b2533;
 // PAGES ==================================================================================================================
 .home-block {
 	&__presentation-slider,
-	&__images-block-gallery {
+	&__images-block-gallery,
+	&__video-block {
 		margin-bottom: 60px;
 	}
 }
@@ -64,7 +65,7 @@ $backdrop: #1b2533;
 }
 
 ._container {
-	max-width: 1320px;
+	max-width: 1420px;
 	margin: 0 auto;
 	padding: 0px 10px;
 }
@@ -80,3 +81,4 @@ $backdrop: #1b2533;
 @import "images-block-gallery";
 @import "message-lite";
 @import "video-block";
+@import "short-description";

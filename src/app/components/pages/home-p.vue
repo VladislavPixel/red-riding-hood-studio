@@ -10,6 +10,7 @@
 			<data-video-global-loader>
 				<video-block :classes="'home-block'" />
 			</data-video-global-loader>
+			<short-description :classes="'home-block'" />
 		</div>
 	</div>
 </template>

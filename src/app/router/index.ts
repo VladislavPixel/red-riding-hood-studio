@@ -33,20 +33,20 @@ export const routersForView: IRouterForView[] = [
 	},
 	{
 		_id: 1,
-		text: "Игры",
+		text: "#Игры",
 		path: "/games",
 		title: "Нажмите, чтобы перейти на страницу - Игры."
 	},
 	{ _id: 1, text: "О нас", path: "/aboutus", title: "Нажмите, чтобы узнать о нас." },
 	{
 		_id: 1,
-		text: "Новости",
+		text: "#Новости",
 		path: "/news",
 		title: "Нажмите, чтобы перейти на страницу - Новости."
 	},
 	{
 		_id: 1,
-		text: "Мерч",
+		text: "#Мерч",
 		path: "/merchandise",
 		title: "Нажмите, чтобы перейти на страницу, где Вы сможете приобрести мерч."
 	},

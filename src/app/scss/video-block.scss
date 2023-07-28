@@ -171,6 +171,7 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: 20;
+		transition: transform 0.3s ease 0s;
 	}
 	&__video-decor {
 		position: absolute;
@@ -191,6 +192,9 @@
 
 .video-gallery-block__column-video {
 	&:hover {
+		.video-gallery-block__video-poster {
+			transform: scale(1.2);
+		}
 		&:before {
 			height: 70%;
 		}

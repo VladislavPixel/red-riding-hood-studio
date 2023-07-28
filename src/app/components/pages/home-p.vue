@@ -10,7 +10,9 @@
 			<data-video-global-loader>
 				<video-block :classes="'home-block'" />
 			</data-video-global-loader>
-			<short-description :classes="'home-block'" />
+			<data-games-short-description-global-loader>
+				<short-description :classes="'home-block'" />
+			</data-games-short-description-global-loader>
 		</div>
 	</div>
 </template>
@@ -20,12 +22,14 @@ import { defineComponent } from "vue";
 import DataPresentationSliderGlobalLoader from "@/app/components/hoc/data-presentation-slider-global-loader.vue";
 import DataGamesImagesBlockGlobalLoader from "@/app/components/hoc/data-games-images-block-global-loader.vue";
 import DataVideoGlobalLoader from "@/app/components/hoc/data-video-global-loader.vue";
+import DataGamesShortDescriptionGlobalLoader from "@/app/components/hoc/data-games-short-description-global-loader.vue";
 
 export default defineComponent({
 	components: {
 		DataPresentationSliderGlobalLoader,
 		DataGamesImagesBlockGlobalLoader,
-		DataVideoGlobalLoader
+		DataVideoGlobalLoader,
+		DataGamesShortDescriptionGlobalLoader
 	}
 });
 </script>

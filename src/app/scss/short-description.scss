@@ -16,4 +16,90 @@
 		height: 80px;
 		flex: 0 0 80px;
 	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0px -15px -15px -15px;
+	}
+	&__column {
+		flex: 0 1 33.333%;
+		padding: 15px;
+	}
+}
+
+.card-short-desc {
+	box-shadow: 0px 0px 6px 0px #000;
+	height: 100%;
+	border-radius: 16px !important;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&__wrapper-img {
+		position: relative;
+		padding: 0px 0px 70% 0px;
+		overflow: hidden;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 15;
+		transition: transform 0.3s ease 0s;
+	}
+	&__content {
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background-color: #00000081;
+	}
+	&__text {
+		font-size: 18px;
+		color: $gray;
+		line-height: 110%;
+		flex: 1 1 auto;
+		text-align: center;
+	}
+	&__wrapper-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	&__icon {
+		width: 50px;
+		height: 50px;
+	}
+	&__footer {
+		margin-top: 35px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__text-market {
+		color: $redColor;
+		letter-spacing: 2px;
+		font-size: 17px;
+		text-align: center;
+		line-height: 110%;
+		margin-bottom: 15px;
+	}
+	&__icon-steam {
+		width: 50px;
+		height: 50px;
+		margin-bottom: 10px;
+	}
+}
+
+.card-short-desc__wrapper-img {
+	&:hover {
+		.card-short-desc__img {
+			transform: scale(1.2);
+		}
+	}
 }

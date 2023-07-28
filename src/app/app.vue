@@ -6,6 +6,7 @@
 			<router-view />
 		</main>
 		<footer-com :classes="'wrapper'" />
+		<go-top />
 	</div>
 </template>
 

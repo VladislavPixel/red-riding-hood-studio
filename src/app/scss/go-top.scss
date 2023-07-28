@@ -1,0 +1,11 @@
+.go-top {
+	position: fixed;
+	bottom: 100px;
+	right: 50px;
+	z-index: 50;
+	&__arrow-top {
+		transform: rotate(-90deg);
+		width: 60px;
+		height: 60px;
+	}
+}

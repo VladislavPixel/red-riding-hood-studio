@@ -52,7 +52,7 @@ export default defineComponent({
 
 				if (this.current === this.dataGames.length - 1 && this.lastEventName === "update:left-arrow-click") {
 					this.valueTranslateX = 0;
-				} else if (this.current === 0 && this.lastEventName === "update:right-arrow-click") {
+				} else if (this.current === 0 && (this.lastEventName === "update:right-arrow-click" || this.lastEventName === "update:interval-timer")) {
 					this.valueTranslateX = (elementHTML.offsetWidth + 15) * (this.dataGames.length + 1);
 				} else {
 					this.updateValueTranslateX(this.current + 1);
@@ -86,7 +86,7 @@ export default defineComponent({
 					this.valueTranslateX = (elementHTML.offsetWidth + 15) * this.dataGames.length;
 
 					this.lastEventName = "";
-				} else if (this.transitionValue === "transform 0s ease 0s" && this.lastEventName === "update:right-arrow-click") {
+				} else if (this.transitionValue === "transform 0s ease 0s" && (this.lastEventName === "update:right-arrow-click" || this.lastEventName === "update:interval-timer")) {
 					this.updateValueTranslateX(this.current + 1);
 
 					this.lastEventName = "";

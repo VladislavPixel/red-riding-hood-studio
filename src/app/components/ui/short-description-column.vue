@@ -41,9 +41,6 @@ export default defineComponent({
 		getImgUrl(prefix: string, nameFile: string) {
 			return require("@/app/assets/images/" + prefix + nameFile);
 		}
-	},
-	mounted() {
-		console.log(this.dataShort, "Данные конкретной колонки");
 	}
 });
 </script>

@@ -9,5 +9,6 @@ import MessageLite from "@/app/components/common/message-lite.vue";
 import ImagesBlockGallery from "@/app/components/common/images-block-gallery.vue";
 import VideoBlock from "@/app/components/common/video-block.vue";
 import ShortDescription from "@/app/components/common/short-description.vue";
+import GoTop from "@/app/components/common/go-top.vue";
 
-export default [Header, Navbar, Footer, SocialNetworkList, JoinSocialNetwork, PresentationSlider, Spinner, MessageLite, ImagesBlockGallery, VideoBlock, ShortDescription];
+export default [Header, Navbar, Footer, SocialNetworkList, JoinSocialNetwork, PresentationSlider, Spinner, MessageLite, ImagesBlockGallery, VideoBlock, ShortDescription, GoTop];

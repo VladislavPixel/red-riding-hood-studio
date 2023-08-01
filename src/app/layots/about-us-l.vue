@@ -1,14 +1,14 @@
 <template>
-	<about-us-l />
+	<about-us-p />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import AboutUsL from "@/app/components/pages/about-us-p.vue";
+import AboutUsP from "@/app/components/pages/about-us-p.vue";
 
 export default defineComponent({
 	components: {
-		AboutUsL
+		AboutUsP
 	}
 });
 </script>

@@ -37,7 +37,7 @@ $backdrop: #1b2533;
 
 .block-content {
 	background: $backdrop;
-	&__home {
+	&__home, &__about-us {
 		padding: 30px 0px;
 	}
 }
@@ -83,3 +83,4 @@ $backdrop: #1b2533;
 @import "video-block";
 @import "short-description";
 @import "go-top";
+@import "about-us";

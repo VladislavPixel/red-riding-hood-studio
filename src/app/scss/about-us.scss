@@ -1,6 +1,6 @@
 .about-us-block {
 	&__head-block {
-
+		margin-bottom: 60px;
 	}
 }
 
@@ -14,7 +14,7 @@
 		text-transform: uppercase;
 		margin-bottom: 10px;
 	}
-	&__icon-vr {
+	&__icon-megaphone {
 		flex: 0 0 80px;
 		width: 80px;
 		height: 80px;
@@ -25,5 +25,49 @@
 		color: $gray;
 		font-size: 23px;
 		font-style: italic;
+	}
+}
+
+.paragraphs-about-us {
+	display: flex;
+	flex-direction: column;
+	&__element {
+		font-size: 18px;
+		color: $gray;
+		margin-bottom: 15px;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 10px 10px 10px 20px;
+		line-height: 120%;
+		position: relative;
+		box-shadow: 0px 0px 6px 0px #000;
+		&:after {
+			content: "";
+			width: 0px;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			transition: background 0.3s ease 0s, width 0.3s ease 0s;
+		}
+		&:hover {
+			&:after {
+				width: 4px;
+				background: $redColor;
+			}
+		}
+		&:before {
+			content: "";
+			background-color: $redColor;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 7px;
+		}
+		&:last-child {
+			margin-bottom: 0px;
+		}
 	}
 }

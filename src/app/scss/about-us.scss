@@ -1,6 +1,37 @@
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
 .about-us-block {
 	&__head-block {
 		margin-bottom: 60px;
+	}
+	&__list-about-us-paragraphs {
+		margin-bottom: 30px;
+	}
+	&__block-messages {
+		padding: 30px 0px;
+		background-color: $darkBlue;
+		box-shadow: 0px 0px 6px 0px #000;
+	}
+	&__container-opportunities {
+		background-color: $darkGray;
+		box-shadow: 0px 0px 6px 0px #000;
+		padding: 60px 0px;
 	}
 }
 
@@ -60,7 +91,7 @@
 			background-color: $redColor;
 			width: 7px;
 			height: 7px;
-			border-radius: 50%;
+			border-radius: 50% !important;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
@@ -68,6 +99,150 @@
 		}
 		&:last-child {
 			margin-bottom: 0px;
+		}
+	}
+}
+
+.messages-row {
+	&__content {
+		display: flex;
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+	&__column {
+		flex: 0 1 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		&:last-child {
+			align-items: center;
+		}
+	}
+	&__title-head {
+		font-size: 27px;
+		color: $redColor;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		position: absolute;
+		position: relative;
+		&:after {
+			content: "";
+			width: 10%;
+			height: 2px;
+			background-color: $redColor;
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			z-index: 30;
+		}
+	}
+	&__text {
+		color: $gray;
+		font-size: 18px;
+		line-height: 120%;
+		max-width: 500px;
+	}
+	&__icon {
+		max-width: 500px;
+		height: 300px;
+		animation: rotation 20s infinite linear;
+	}
+}
+
+.block-opportunities {
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	&__title {
+		font-size: 40px;
+		color: $redColor;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	&__sub-title {
+		font-size: 20px;
+		color: $gray;
+	}
+}
+
+.block-opportunities {
+	&__header {
+		margin-bottom: 70px;
+	}
+	&__icon {
+		flex: 0 0 60px;
+		width: 60px;
+		height: 60px;
+	}
+	&__card-title {
+		color: aliceblue;
+		font-size: 18px;
+		margin-bottom: 15px;
+		transition: color 0.3s ease 0s;
+	}
+	&__paragraph {
+		color: $gray;
+		line-height: 130%;
+		transition: color 0.3s ease 0s;
+	}
+	&__icon-block {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90px;
+		height: 90px;
+		border-radius: 50% !important;
+		background-color: $darkBlue;
+		box-shadow: 0px 0px 6px 0px #000;
+		transform: translateY(-30%);
+		transition: background 0.6s ease 0s;
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0px -15px 0px -15px;
+	}
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 15px;
+		margin-bottom: 55px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+	&__card {
+		height: 100%;
+		border-radius: 16px !important;
+		padding: 0px 15px 15px 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		transition: background 0.6s ease 0s, box-shadow 0.6s ease 0s;
+	}
+}
+
+.block-opportunities__column {
+	&:hover {
+		.block-opportunities__card {
+			background: $gray;
+			box-shadow: 0px 0px 6px 0px $redColor;
+		}
+		.block-opportunities__icon-block {
+			background: $redColor;
+		}
+		.block-opportunities__card-title {
+			color: $darkBlue;
+		}
+		.block-opportunities__paragraph {
+			color: $darkBlue;
 		}
 	}
 }
